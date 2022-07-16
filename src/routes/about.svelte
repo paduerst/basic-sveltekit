@@ -23,7 +23,7 @@
 	<h1>About this app</h1>
 
 	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app.
+		This is a SvelteKit app.
 	</p>
 </div>
 

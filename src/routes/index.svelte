@@ -4,4 +4,4 @@
 </svelte:head>
 
 <h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<p>Visit kit.svelte.dev to read the documentation. This will eventually be a cool <abbr title="Dungeons & Dragons">D&D</abbr> website.</p>
