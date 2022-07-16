@@ -1,11 +1,13 @@
 <script>
 	import { page } from '$app/stores';
-  import Hamburger from '../icons/Hamburger.svelte';
-  import EditorIcon from '../icons/Edit.svelte';
-  import ShareIcon from '../icons/Share.svelte';
   import Sidebar from './Sidebar.svelte';
   import Navigation from './Navigation.svelte';
   import Editor from './Editor.svelte';
+
+  import Hamburger from '../icons/Hamburger.svelte';
+  import EditorIcon from '../icons/Edit.svelte';
+  import ShareIcon from '../icons/Share.svelte';
+  import Logo from '../icons/LogoButton.svelte';
 
   let showNavigation = false;
   let showEditor = false;
@@ -40,6 +42,8 @@
 <header>
   <Hamburger on:click={toggleNavigation} />
 
+  <Logo color={""} />
+
   {#if $page.url.pathname === '/'}
     <!-- TODO: Check that dragon stat block exists before displaying this -->
     <ShareIcon rightAlign={true} />
@@ -53,7 +57,7 @@
   header {
     height: 60px;
     width: 100%;
-    background-color: rgb(50, 50, 50);
-    border-bottom: 1px solid rgb(30, 30, 30);
+    background-color: #1a1a1a;
+    border-bottom: 1px solid rgb(0, 0, 0);
   }
 </style>

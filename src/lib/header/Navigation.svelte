@@ -33,7 +33,7 @@
 		display: block;
 		width: 100%;
 		height: 1px;
-		background-color: #555;
+		background-color: #444;
 	}
 
 	a:last-of-type::after {
@@ -43,6 +43,6 @@
 		display: block;
 		width: 100%;
 		height: 1px;
-		background-color: #555;
+		background-color: #444;
 	}
 </style>

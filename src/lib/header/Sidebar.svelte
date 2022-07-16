@@ -36,7 +36,7 @@
 		z-index: 98;
 		width: 100%;
 		height: 100%;
-		background: rgba(0,0,0,0.4);
+		background: rgba(0,0,0,0.3);
 	}
 
 	aside {
@@ -49,17 +49,18 @@
 		overflow-x: hidden;
 		overflow-y: auto;
 		text-align: left;
-		background: rgb(50,50,50);
+		background: #1a1a1a;
 		color: #ccc;
-		border-left: 1px solid rgb(30,30,30);
 	}
 
 	.left {
 		left: 0;
+		border-right: 1px solid rgb(0,0,0);
 	}
 
 	.right {
 		right: 0;
+		border-left: 1px solid rgb(0,0,0);
 	}
 
 	#btnWrapper {

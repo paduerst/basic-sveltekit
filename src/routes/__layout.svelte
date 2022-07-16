@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 </script>
@@ -31,10 +31,6 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
 	}
 
 	@media (min-width: 480px) {
