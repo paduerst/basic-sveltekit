@@ -7,6 +7,10 @@
 		<meta http-equiv="content-security-policy" content=""><title>About</title><meta name="description" content="About this app" data-svelte="svelte-1ds1qyu">
 	<link rel="stylesheet" href="/_app/immutable/assets/pages/__layout.svelte-a3707d8c.css">
 	<link rel="stylesheet" href="/_app/immutable/assets/pages/about.svelte-bf4528fa.css">
+	<link rel="modulepreload" href="/_app/immutable/start-0ad5f17e.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-f51ece50.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-56cc19ab.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/about.svelte-142c29e3.js">
 	</head>
 	<body>
 		<div>
@@ -39,6 +43,24 @@
 <footer class="svelte-f5pegm"><p>visit kit.svelte.dev to learn SvelteKit</p>
 </footer>
 
-</div>
+
+		<script type="module" data-sveltekit-hydrate="oqqjg8">
+		import { start } from "/_app/immutable/start-0ad5f17e.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="oqqjg8"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 2],
+				params: {},
+				routeId: "about"
+			}
+		});
+	</script></div>
 	</body>
 </html>
