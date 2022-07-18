@@ -3,6 +3,7 @@
   import Sidebar from './Sidebar.svelte';
   import Navigation from './Navigation.svelte';
   import Editor from './Editor.svelte';
+	import ShareModal from './ShareModal.svelte';
 
   import Hamburger from '../icons/Hamburger.svelte';
   import EditorIcon from '../icons/Edit.svelte';
@@ -11,12 +12,15 @@
 
   let showNavigation = false;
   let showEditor = false;
+  let showModal = false;
+  let urlCopied = false;
 
   const toggleNavigation = () => {
     if (showNavigation) {
       showNavigation = false;
     } else {
       showEditor = false;
+      showModal = false;
       showNavigation = true;
     }
   }
@@ -26,7 +30,19 @@
       showEditor = false;
     } else {
       showNavigation = false;
+      showModal = false;
       showEditor = true;
+    }
+  }
+
+  const toggleModal = () => {
+    if (showModal) {
+      showModal = false;
+      urlCopied = false; // reset the urlCopied state on close
+    } else {
+      showNavigation = false;
+      showEditor = false;
+      showModal = true;
     }
   }
 </script>
@@ -39,6 +55,8 @@
   <Editor />
 </Sidebar>
 
+<ShareModal bind:show={showModal} {urlCopied} on:click={toggleModal} on:copiedUrl={() => {urlCopied = true;}} />
+
 <header>
   <Hamburger on:click={toggleNavigation} />
 
@@ -46,7 +64,7 @@
 
   {#if $page.url.pathname === '/'}
     <!-- TODO: Check that dragon stat block exists before displaying this -->
-    <ShareIcon rightAlign={true} />
+    <ShareIcon on:click={toggleModal} rightAlign={true} />
   {/if}
   <EditorIcon on:click={toggleEditor} rightAlign={true} />
 </header>

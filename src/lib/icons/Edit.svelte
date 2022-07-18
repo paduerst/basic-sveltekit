@@ -53,4 +53,8 @@
 		color: #fff;
 		cursor: pointer;
 	}
+
+	button:active {
+		color: #aaa;
+	}
 </style>

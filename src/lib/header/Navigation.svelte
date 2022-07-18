@@ -26,6 +26,10 @@
 		color: #fff;
 	}
 
+	a:active {
+		color: #aaa;
+	}
+
 	a:before {
 		position: absolute;
 		top: 0;

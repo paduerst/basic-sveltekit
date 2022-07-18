@@ -1,19 +1,12 @@
 <script>
-	import { page } from '$app/stores';
 	import Logo from './Logo.svelte';
 
 	export let color = "";
 </script>
 
-{#if $page.url.pathname === '/'}
-	<div class="logoWrapper">
-		<Logo {color} />
-	</div>
-{:else}
-	<a class="logoWrapper" sveltekit:prefetch href="/">
-		<Logo {color} />
-	</a>
-{/if}
+<a class="logoWrapper" sveltekit:prefetch href="/">
+	<Logo {color} />
+</a>
 
 <style>
 	.logoWrapper {
